@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sdesim"
+version = "0.1.0"
+description = "Numerical ODE/SDE integrators (RK4, Euler–Maruyama, Milstein, Itô–Taylor strong order 2) with honey bee hive–plant, disease and pesticide model applications"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "numpy",
+    "matplotlib",
+    "tqdm"
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
